@@ -1,0 +1,39 @@
+---
+description: Regras gerais do projeto liferson.com.br
+alwaysApply: true
+---
+
+# Regras do projeto — liferson.com.br
+
+## Idioma
+- Sempre responda em português do Brasil (PT-BR)
+
+## Identidade do projeto
+- Site: liferson.com.br
+- CMS: CMS SEO Pro (baseado no cms-core)
+- Dono: Líferson — Consultor de Tráfego Orgânico
+
+## Stack
+- Framework: Astro 5 SSG
+- Estilo: Tailwind CSS
+- Componentes admin: React
+- Package manager: Bun (nunca use npm ou yarn)
+- Deploy: Vercel
+
+## Regras de desenvolvimento
+- Nunca modifique arquivos dentro de src/pages/admin/
+- Nunca modifique arquivos dentro de src/plugins/
+- Nunca modifique src/middleware.ts
+- Nunca modifique src/lib/auth.ts
+- Para instalar pacotes, use sempre: bun add
+- Para rodar o projeto, use sempre: bun dev
+- Para build, use sempre: bun run build
+
+## Estrutura de dados
+- Os dados do site ficam em src/data/ como arquivos JSON
+- Posts ficam em src/content/posts/ como arquivos Markdown
+
+## Comportamento
+- Sempre explique o que vai fazer antes de fazer
+- Ao criar componentes, use Astro (.astro) para páginas e React (.tsx) apenas para componentes interativos
+- Mantenha o código limpo, comentado em português e organizado

@@ -1,0 +1,38 @@
+---
+const currentYear = new Date().getFullYear();
+const whatsapp = 'https://wa.me/5551998181917';
+---
+
+<footer class="bg-primary text-white mt-20">
+  <div class="max-w-[1100px] mx-auto px-6 py-12">
+    <div class="flex flex-col md:flex-row justify-between gap-8">
+
+      <!-- Marca -->
+      <div class="max-w-xs">
+        <p class="font-semibold text-lg mb-2">Líferson</p>
+        <p class="text-sm text-blue-200 leading-relaxed">Consultor de Tráfego Orgânico. Seu conteúdo posicionado onde a decisão de compra acontece.</p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-col gap-2">
+        <p class="text-xs uppercase tracking-widest text-blue-300 mb-1">Navegação</p>
+        <a href="/blog" class="text-sm text-blue-100 hover:text-white transition-colors no-underline">Blog</a>
+        <a href="/sobre" class="text-sm text-blue-100 hover:text-white transition-colors no-underline">Sobre</a>
+        <a href="/recursos" class="text-sm text-blue-100 hover:text-white transition-colors no-underline">Recursos</a>
+        <a href="/contato" class="text-sm text-blue-100 hover:text-white transition-colors no-underline">Contato</a>
+      </div>
+
+      <!-- Contato -->
+      <div class="flex flex-col gap-2">
+        <p class="text-xs uppercase tracking-widest text-blue-300 mb-1">Contato</p>
+        <a href={whatsapp} target="_blank" rel="noopener noreferrer" class="text-sm text-blue-100 hover:text-white transition-colors no-underline">WhatsApp</a>
+      </div>
+
+    </div>
+
+    <div class="border-t border-blue-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-blue-300">© {currentYear} Líferson. Todos os direitos reservados.</p>
+      <p class="text-xs text-blue-300">Feito com Astro + CMS SEO Pro</p>
+    </div>
+  </div>
+</footer>

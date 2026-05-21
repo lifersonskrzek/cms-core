@@ -4,6 +4,11 @@ export default {
     theme: {
         extend: {
             colors: {
+                primary: '#0C1B33',
+                secondary: '#1A3A5C',
+                accent: '#3D7EBF',
+                background: '#FFFFFF',
+                surface: '#F5F8FC',
                 violet: {
                     50:  '#f5f3ff',
                     100: '#ede9fe',
@@ -17,6 +22,9 @@ export default {
                     900: '#4c1d95',
                     950: '#2e1065',
                 },
+            },
+            fontFamily: {
+                sans: ['DM Sans', 'sans-serif'],
             },
         },
     },

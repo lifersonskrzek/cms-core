@@ -2,31 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    /* Cores definidas dinamicamente pelo BaseLayout.astro via define:vars */
-    --color-primary: 254 79 112;
-    --color-primary-dark: 32 54 86;
-    --color-accent: 255 163 135;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  ::selection {
-    background-color: rgb(var(--color-primary) / 0.15);
-    color: rgb(var(--color-primary-dark));
-  }
+:root {
+  --color-primary: #0C1B33;
+  --color-secondary: #1A3A5C;
+  --color-accent: #3D7EBF;
+  --color-background: #FFFFFF;
+  --color-surface: #F5F8FC;
+  --color-text: #0C1B33;
+  --color-text-muted: #4A6080;
+  --font-sans: 'DM Sans', sans-serif;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --max-width: 1100px;
 }
 
-@layer components {
-  .walker-section-border {
-    @apply border-b border-gray-200;
-  }
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
 }

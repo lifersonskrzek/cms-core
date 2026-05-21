@@ -1,85 +1,44 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Sidebar from '../components/Sidebar.astro';
-import { readData } from '../lib/readData';
-const siteConfig = readData('siteConfig.json');
-const contatoData = readData('contato.json');
 ---
 
-<BaseLayout
-  title={contatoData.seo?.title || "Contato"}
-  description={contatoData.seo?.description}
-  image={contatoData.seo?.image}
->
+<BaseLayout title="Contato — Líferson" description="Entre em contato com Líferson para falar sobre SEO, GEO e tráfego orgânico.">
 
-  <section class="max-w-6xl mx-auto px-4 py-10">
-    <div class="mb-6">
-      <h1 class="text-3xl font-bold" style="font-family: var(--font-heading);">{contatoData.hero?.title || "Contato"}</h1>
-      <nav class="text-sm text-gray-500 mt-1">
-        <a href="/" class="hover:text-gray-700">Home</a>
-        <span class="mx-2">/</span>
-        <span>Contato</span>
-      </nav>
-    </div>
+  <section class="bg-white py-20 px-6">
+    <div class="max-w-[1100px] mx-auto">
 
-    <div class="flex flex-col lg:flex-row gap-8">
-      <div class="flex-1 min-w-0">
-        <div class="bg-white rounded-xl border border-gray-200 p-6">
+      <div class="max-w-xl">
+        <span class="text-xs font-medium text-accent uppercase tracking-widest border border-accent/30 bg-accent/5 px-3 py-1 rounded-full">
+          Contato
+        </span>
+        <h1 class="text-4xl font-bold text-primary mt-6 mb-4 leading-tight">
+          Vamos conversar?
+        </h1>
+        <p class="text-lg text-secondary/70 leading-relaxed mb-10">
+          Se você quer aumentar o tráfego orgânico do seu negócio, tem dúvidas sobre SEO ou GEO, ou quer saber como posso ajudar — me chama.
+        </p>
 
-          {contatoData.hero?.subtitle && (
-            <p class="text-gray-600 mb-6">{contatoData.hero.subtitle}</p>
-          )}
-
-          <!-- Contact info cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-            {siteConfig.contact?.address && (
-              <div class="text-center p-4 bg-gray-50 rounded-lg">
-                <div class="text-2xl mb-2">📍</div>
-                <h6 class="font-semibold text-sm mb-1">{contatoData.cards?.addressLabel || "Endereço"}</h6>
-                <p class="text-xs text-gray-500">{siteConfig.contact.address}</p>
-              </div>
-            )}
-            {siteConfig.contact?.phone && (
-              <div class="text-center p-4 bg-gray-50 rounded-lg">
-                <div class="text-2xl mb-2">📞</div>
-                <h6 class="font-semibold text-sm mb-1">{contatoData.cards?.phoneLabel || "Telefone"}</h6>
-                <p class="text-xs text-gray-500">{siteConfig.contact.phone}</p>
-              </div>
-            )}
-            {siteConfig.contact?.email && (
-              <div class="text-center p-4 bg-gray-50 rounded-lg">
-                <div class="text-2xl mb-2">✉️</div>
-                <h6 class="font-semibold text-sm mb-1">E-mail</h6>
-                <a href={`mailto:${siteConfig.contact.email}`} class="text-xs text-[--color-primary]">{siteConfig.contact.email}</a>
-              </div>
-            )}
-          </div>
-
-          <hr class="my-6 border-gray-200" />
-
-          <h4 class="text-lg font-bold mb-4" style="font-family: var(--font-heading);">Envie uma Mensagem</h4>
-          <form id="contact-form" method="post" class="flex flex-col gap-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" name="InputName" placeholder="Seu nome" required
-                class="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[--color-primary]" />
-              <input type="email" name="InputEmail" placeholder="Seu e-mail" required
-                class="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[--color-primary]" />
+        <div class="flex flex-col gap-4">
+          <a
+            href="https://wa.me/5551998181917"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-5 border border-gray-100 rounded-xl hover:border-accent/40 transition-colors no-underline group"
+          >
+            <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#22c55e" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.529 5.855L0 24l6.335-1.505A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.36-.214-3.724.885.936-3.617-.235-.372A9.818 9.818 0 1112 21.818z"/>
+              </svg>
             </div>
-            <input type="text" name="InputSubject" placeholder="Assunto"
-              class="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[--color-primary]" />
-            <textarea name="InputMessage" rows="5" placeholder="Sua mensagem..." required
-              class="border border-gray-200 rounded-lg px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[--color-primary]"></textarea>
             <div>
-              <button type="submit" class="btn-primary">{contatoData.cards?.formSubmitText || "Enviar Mensagem"}</button>
+              <p class="font-medium text-primary group-hover:text-accent transition-colors">WhatsApp</p>
+              <p class="text-sm text-secondary/60">Resposta rápida — me chama lá</p>
             </div>
-          </form>
-
+          </a>
         </div>
-      </div>
 
-      <aside class="lg:w-80 flex-shrink-0">
-        <Sidebar />
-      </aside>
+      </div>
     </div>
   </section>
 

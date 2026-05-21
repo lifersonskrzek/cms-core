@@ -82,8 +82,15 @@ const posts = await getRecentPosts(3);
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {posts.map((post) => (
           <a href={post.href} class="group bg-white border border-gray-100 rounded-xl overflow-hidden hover:border-accent/40 transition-colors no-underline">
-            {post.image && (
+            {post.image ? (
               <img src={post.image} alt={post.title} class="w-full h-44 object-cover" />
+            ) : (
+              <div class="w-full h-44 bg-accent/10 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="#3D7EBF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" opacity="0.4">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="m21 21-4.35-4.35"/>
+                </svg>
+              </div>
             )}
             <div class="p-5">
               {post.category && (

@@ -1,17 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout title="Recursos — Líferson" description="Artigos essenciais, ferramentas recomendadas, materiais gratuitos e leituras externas sobre SEO, GEO e IA.">
 
-  <section class="bg-white py-20 px-6">
+  <PageHeader badge="Arsenal Orgânico" breadcrumb={[{ label: 'Início', href: '/' }, { label: 'Recursos' }]} />
+
+  <section class="bg-white pt-8 pb-20 px-6">
     <div class="max-w-[1100px] mx-auto">
 
       <div class="max-w-2xl mb-16">
-        <span class="text-xs font-medium text-accent uppercase tracking-widest border border-accent/30 bg-accent/5 px-3 py-1 rounded-full">
-          Recursos
-        </span>
-        <h1 class="text-4xl font-bold text-primary mt-6 mb-4 leading-tight">
+        <h1 class="text-4xl font-bold leading-tight text-primary mt-4 mb-4">
           Tudo que uso e recomendo
         </h1>
         <p class="text-lg text-secondary/70 leading-relaxed">

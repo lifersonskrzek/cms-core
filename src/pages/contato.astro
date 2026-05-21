@@ -1,17 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout title="Contato — Líferson" description="Entre em contato com Líferson para falar sobre SEO, GEO e tráfego orgânico.">
 
-  <section class="bg-white py-20 px-6">
+  <PageHeader badge="Fale Comigo" breadcrumb={[{ label: 'Início', href: '/' }, { label: 'Contato' }]} />
+
+  <section class="bg-white pt-8 pb-20 px-6">
     <div class="max-w-[1100px] mx-auto">
 
       <div class="max-w-xl">
-        <span class="text-xs font-medium text-accent uppercase tracking-widest border border-accent/30 bg-accent/5 px-3 py-1 rounded-full">
-          Contato
-        </span>
-        <h1 class="text-4xl font-bold text-primary mt-6 mb-4 leading-tight">
+        <h1 class="text-4xl font-bold leading-tight text-primary mt-4 mb-4">
           Vamos conversar?
         </h1>
         <p class="text-lg text-secondary/70 leading-relaxed mb-10">
@@ -19,7 +19,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </p>
 
         <div class="flex flex-col gap-4">
-          <a
+          
             href="https://wa.me/5551998181917"
             target="_blank"
             rel="noopener noreferrer"

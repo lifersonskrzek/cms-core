@@ -1,0 +1,35 @@
+---
+export interface Props {
+  badge: string;
+  breadcrumb?: { label: string; href?: string }[];
+}
+const { badge, breadcrumb } = Astro.props;
+---
+
+<div class="max-w-[1100px] mx-auto px-6">
+  {breadcrumb ? (
+    <nav aria-label="Breadcrumb" class="pt-8 pb-10">
+      <ol class="flex flex-row items-center gap-1.5 whitespace-nowrap">
+        {breadcrumb.map((item, index) => (
+          <li class="flex flex-row items-center gap-1.5">
+            {item.href ? (
+              <a href={item.href} class="text-xs font-medium text-accent hover:text-secondary transition-colors no-underline">
+                {item.label}
+              </a>
+            ) : (
+              <span class="text-xs font-medium text-secondary/40">{item.label}</span>
+            )}
+            {index < breadcrumb.length - 1 && (
+              <span class="text-secondary/30 text-xs">›</span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  ) : (
+    <div class="pt-20 pb-6"></div>
+  )}
+  <span class="text-xs font-medium text-accent uppercase tracking-widest border border-accent/30 bg-accent/5 px-3 py-1 rounded-full inline-block">
+    {badge}
+  </span>
+</div>

@@ -53,6 +53,18 @@ const socialImage = image?.startsWith('http') ? image : image ? new URL(image, s
   <meta property="og:description" content={description} />
   {socialImage && <meta property="og:image" content={socialImage} />}
   <meta property="og:url" content={Astro.url} />
+  <meta property="og:site_name" content={siteConfig.name} />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={formattedTitle} />
+  <meta name="twitter:description" content={description} />
+  {socialImage && <meta name="twitter:image" content={socialImage} />}
+
+  <!-- SEO adicional -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={Astro.url} />
 
   <!-- Google Fonts — DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

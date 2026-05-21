@@ -24,7 +24,8 @@ export const GET: APIRoute = async () => {
     const staticPages = [
         { url: '/', priority: '1.0', changefreq: 'daily' },
         { url: '/blog', priority: '0.8', changefreq: 'daily' },
-        { url: '/sobre', priority: '0.5', changefreq: 'monthly' },
+        { url: '/sobre', priority: '0.6', changefreq: 'monthly' },
+        { url: '/recursos', priority: '0.6', changefreq: 'monthly' },
         { url: '/contato', priority: '0.5', changefreq: 'monthly' },
         { url: '/privacidade', priority: '0.3', changefreq: 'yearly' },
         { url: '/termos', priority: '0.3', changefreq: 'yearly' },
